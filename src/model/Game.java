@@ -4,7 +4,6 @@ import Entity.*;
 import Entity.Weapon.Bullets.Bullet;
 import Entity.Weapon.Bullets.FlyBullets;
 import Entity.Weapon.GoldenAK;
-import Entity.Weapon.Gun;
 import model.listener.PlayerListener;
 
 import java.awt.*;

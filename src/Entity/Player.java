@@ -2,8 +2,6 @@ package Entity;
 
 import model.listener.PlayerListener;
 
-import java.awt.*;
-
 public class Player extends Human{
     private PlayerListener listener;
     private double angle;
