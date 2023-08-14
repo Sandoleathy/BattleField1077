@@ -11,6 +11,9 @@ public class PlayerListener extends MouseAdapter implements KeyListener{
      * R重新装填
      * E交互
      * 1切换武器
+     * 鼠标监听器存在误差（目前不知道是否存在于所有系统中）
+     * x轴偏移+7
+     * y轴偏移+29
      */
     private boolean up;
     private boolean down;

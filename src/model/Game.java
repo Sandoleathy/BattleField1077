@@ -56,11 +56,12 @@ public class Game {
     }
     public void checkFire(){
         if(playerListener.isClick()){
+            System.out.println("(" + playerListener.getX() + " , " + playerListener.getY());
             Bullet b = player.useWeapon();
             if (b != null) {
                 bulletList.add(
                         new FlyBullets(player.getMuzzleX() , player.getMuzzleY() , b.getDamage() ,
-                                50 , b.getRange() , player.getDirectionVector()));
+                                50 , b.getRange() , player.getAngle()));
             }
         }
     }
@@ -69,6 +70,9 @@ public class Game {
         checkFire();
         for(FlyBullets b : bulletList){
             b.move();
+            /*
+             *子弹飞的太快可能会直接穿过物体不造成伤害，这点需要注意，未来需要修复
+             */
             if(player.isHit(b) && b.isAlive()){
                 System.out.println(b.getName() + " hit " + player.getName());
                 player.takeDamage(b.getDamage());
